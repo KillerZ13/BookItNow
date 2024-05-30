@@ -14,14 +14,6 @@ function registerUser($username, $email, $password) {
         return false;
     }
 }
-// includes/functions.php
-
-function isLoggedIn() {
-    // Implementation of your login status check
-    // For example, check if a user session variable exists
-    return isset($_SESSION['user_id']);
-}
-
 
 function loginUser($username, $password) {
     global $conn;
@@ -39,10 +31,14 @@ function loginUser($username, $password) {
     }
     return false;
 }
+// includes/functions.php
 
 function isLoggedIn() {
+    // Implementation of your login status check
+    // For example, check if a user session variable exists
     return isset($_SESSION['user_id']);
 }
+
 
 function isAdmin() {
     global $conn;
